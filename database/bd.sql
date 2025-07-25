@@ -79,6 +79,8 @@ CREATE TABLE IF NOT EXISTS `climate`.`tt_clima_registrado_actual` (
   `wind_speed` DECIMAL(10,0) NOT NULL COMMENT 'Velocidad del Viento',
   `wind_direction` DECIMAL(10,0) NOT NULL COMMENT 'Direccion en grados.',
   `weather_id` INT NOT NULL COMMENT 'Id del clima Se comunica con catálogo',
+  `nubosidad` int NOT NULL,
+  `punto_rocio` decimal(10,0) NOT NULL,
   PRIMARY KEY (`id_clima`),
   INDEX `tt_clima_registrado_actual_tc_tipo_clima_FK` (`weather_id` ASC) VISIBLE,
   CONSTRAINT `tt_clima_registrado_actual_tc_tipo_clima_FK`

@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
-
+import './services/scheduler';
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.get('/', (_req, res) => {
